@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <title>Password generator</title>
+</head>
+
+<body style="height: 100vh; position: relative;">
+    <div class="info" style="text-align: center;">
+        <h1 class="info__title" style="margin-top: 10px;">
+            Hello, this is a password generator
+        </h1>
+        <h3 class="info__subtitle">
+            Do you want a secure password?
+        </h3>
+    </div>
+    <div class="generate" style="text-align: center;">
+        <form action="{% url 'password' %}">
+            <label for="length">Length</label>
+            <select name="length" style="margin-bottom: 10px;">
+                <!--выпадающий список-->
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="12" selected="selected">12</option> <!--selected = default value-->
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select>
+            <div class="generate__options">
+                <div>
+                    <input type="checkbox" name="uppercase" style="margin-bottom: 10px;"> UPPERCASE
+                </div>
+                <div>
+                    <input type="checkbox" name="numbers" style="margin-bottom: 10px;"> Numbers
+                </div>
+                <div>
+                    <input type="checkbox" name="special"> Special char
+                </div>
+            </div>
+            <!--чекбокс-->
+            <input type="submit" value="generate" style="margin-top: 10px; text-transform: uppercase; text-align: center;" class="btn btn-primary">
+        </form>
+    </div>
+    <footer class="footer" style="display: flex; align-items: center; justify-content: center; position: absolute; bottom: 0; left: 0; right: 0; width: 100%; text-transform: uppercase; background-color: #000; color: #fff;">
+        <h3 style="font-size: 30px; font-weight: 700;" class="footer__title">LUBASKIN_CODE</h1>
+    </footer>
+</body>
+
+</html>

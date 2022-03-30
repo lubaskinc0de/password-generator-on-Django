@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body style="height: 100vh; position: relative;">
+    <div class="container text-center">
+        <div class="password">
+            <h1 class="password__title" style="margin-top: 10px; margin-bottom: 10px;">Your pass </h1>
+            <div class="password__item">
+                <h3 class="alert alert-success" style="text-align: center;">{{password}}</h3>
+            </div>
+            <div class="password__home">
+                <a href="{% url 'homepage' %}" class="btn btn-secondary">Home</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" style="display: flex; align-items: center; justify-content: center; position: absolute; bottom: 0; left: 0; right: 0; width: 100%; text-transform: uppercase; background-color: #000; color: #fff;">
+        <h3 style="font-size: 30px; font-weight: 700;" class="footer__title">LUBASKIN_CODE</h1>
+    </footer>
+</body>
+
+</html>
